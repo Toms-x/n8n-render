@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 8787
+      - key: WEBHOOK_URL
+        value: https://your-app-name.onrender.com
